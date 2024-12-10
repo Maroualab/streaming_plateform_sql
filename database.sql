@@ -109,3 +109,8 @@ INNER JOIN user_plt u
 ON w.UserID = u.UserID
 WHERE CompletionPercentage = 100;
 
+-- Trier et limiter : Afficher les 5 films les plus longs, triés par durée
+SELECT Title , Duration 
+FROM movie
+ORDER BY Duration DESC
+LIMIT 5;
