@@ -64,3 +64,12 @@ ALTER TABLE review
 ADD CONSTRAINT FK_userReview
 FOREIGN KEY (UserID) REFERENCES user_plt(UserId);
 
+--add FK link between watchhistory and user table
+ALTER TABLE watchhistory 
+ADD CONSTRAINT FK_userhistory
+FOREIGN KEY (UserID) REFERENCES user_plt(UserId);
+
+--add FK link betweeb watchhistory and movie table
+ALTER TABLE watchhistory 
+ADD CONSTRAINT FK_movieHistory
+FOREIGN KEY (MovieID) REFERENCES movie(MovieId);
