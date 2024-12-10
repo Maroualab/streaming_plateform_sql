@@ -30,6 +30,16 @@ CREATE TABLE watchhistory(
 WatchHistoryID INT AUTO_INCREMENT PRIMARY KEY, 
 UserID INT NOT NULL,
 MovieID INT NOT NULL,
-WatchDate DATE,
+WatchDate DATE NOT NULL,
 CompletionPercentage INT DEFAULT (0)
+);
+
+--add table review
+CREATE TABLE review(
+ReviewID INT AUTO_INCREMENT PRIMARY KEY, 
+UserID INT NOT NULL,
+MovieID INT NOT NULL,
+RATING INT NOT NULL,
+ReviewText TEXT,
+ReviewDate DATE NOT NULL 
 );
