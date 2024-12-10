@@ -87,3 +87,8 @@ VALUES( 'Data Science Adventures' , 'Documentary' , 2023 , 220 , 'PG');
 SELECT * 
 FROM movie 
 WHERE genre = 'Comedy' AND ReleaseYear > 2020;
+
+--Mise à jour des abonnements : Passer tous les utilisateurs de "Basic" à "Premium"
+UPDATE subscription
+SET SubscriptionType = 'Premium'
+WHERE SubscriptionType = 'Basic';
