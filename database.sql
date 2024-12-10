@@ -24,3 +24,12 @@ SubscriptionType varchar (50) NOT NULL
 CHECK (SubscriptionType = 'Basic' OR SubscriptionType = 'Premium'),
 MonthlyFee DECIMAL (10,2)
 );
+
+--add table watchhistory
+CREATE TABLE watchhistory(
+WatchHistoryID INT AUTO_INCREMENT PRIMARY KEY, 
+UserID INT NOT NULL,
+MovieID INT NOT NULL,
+WatchDate DATE,
+CompletionPercentage INT DEFAULT (0)
+);
