@@ -119,3 +119,10 @@ LIMIT 5;
 SELECT AVG(CompletionPercentage), MovieID
 FROM watchhistory
 GROUP BY MovieID;
+
+-- Group By : Grouper les utilisateurs par type d’abonnement et compter le nombre total d’utilisateurs par groupe
+SELECT COUNT(u.UserID) ,  s.Subscriptiontype
+FROM user_plt u 
+INNER JOIN subscription s ON u.SubscriptionID = s.SubscriptionID
+GROUP BY s.SubscriptionType
+ORDER BY COUNT(u.UserID) DESC;
