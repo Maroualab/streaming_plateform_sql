@@ -99,3 +99,7 @@ FROM subscription  s
 INNER JOIN user_plt  u
 ON s.SubscriptionID = u.SubscriptionID;
 
+-- added condition to completionpercentage 
+ALTER TABLE watchhistory ADD CONSTRAINT CHECK (CompletionPercentage >= 0 AND CompletionPercentage <= 100);
+
+
