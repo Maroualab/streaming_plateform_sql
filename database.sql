@@ -53,3 +53,9 @@ ReleaseYear INT NOT NULL,
 Duration INT NOT NULL, 
 Rating VARCHAR(10) NOT NULL
 );
+
+--add FK link between user and subscription table
+ALTER TABLE user_plt
+ADD CONSTRAINT FK_userSubscription
+FOREIGN KEY (SubscriptionID) REFERENCES subscription(SubscriptionID);
+
