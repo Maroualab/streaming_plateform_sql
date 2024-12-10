@@ -59,3 +59,8 @@ ALTER TABLE user_plt
 ADD CONSTRAINT FK_userSubscription
 FOREIGN KEY (SubscriptionID) REFERENCES subscription(SubscriptionID);
 
+--add FK link between review and user table
+ALTER TABLE review 
+ADD CONSTRAINT FK_userReview
+FOREIGN KEY (UserID) REFERENCES user_plt(UserId);
+
