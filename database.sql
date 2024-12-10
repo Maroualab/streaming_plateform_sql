@@ -82,3 +82,8 @@ FOREIGN KEY (MovieID) REFERENCES movie(MovieID);
 --Insérer un film : Ajouter un nouveau film intitulé Data Science Adventures dans le genre "Documentary"
 INSERT INTO movie (Title , Genre, ReleaseYear , Duration , Rating)
 VALUES( 'Data Science Adventures' , 'Documentary' , 2023 , 220 , 'PG');
+
+--Rechercher des films : Lister tous les films du genre "Comedy" sortis après 2020
+SELECT * 
+FROM movie 
+WHERE genre = 'Comedy' AND ReleaseYear > 2020;
