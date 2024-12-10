@@ -89,6 +89,13 @@ FROM movie
 WHERE genre = 'Comedy' AND ReleaseYear > 2020;
 
 --Mise à jour des abonnements : Passer tous les utilisateurs de "Basic" à "Premium"
-UPDATE subscription
-SET SubscriptionType = 'Premium'
-WHERE SubscriptionType = 'Basic';
+UPDATE user_plt
+SET SubscriptionID = 1
+WHERE SubscriptionID = 2;
+
+--Afficher les abonnements : Joindre les utilisateurs à leurs types d'abonnements 
+SELECT s.SubscriptionType ,u.FirstName,u.LastName
+FROM subscription  s
+INNER JOIN user_plt  u
+ON s.SubscriptionID = u.SubscriptionID;
+
