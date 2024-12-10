@@ -73,3 +73,8 @@ FOREIGN KEY (UserID) REFERENCES user_plt(UserId);
 ALTER TABLE watchhistory 
 ADD CONSTRAINT FK_movieHistory
 FOREIGN KEY (MovieID) REFERENCES movie(MovieId);
+
+--add FK link between review and movie table
+ALTER TABLE review
+ADD CONSTRAINT FK_movieReview
+FOREIGN KEY (MovieID) REFERENCES movie(MovieID);
