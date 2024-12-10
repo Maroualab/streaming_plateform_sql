@@ -102,4 +102,10 @@ ON s.SubscriptionID = u.SubscriptionID;
 -- added condition to completionpercentage 
 ALTER TABLE watchhistory ADD CONSTRAINT CHECK (CompletionPercentage >= 0 AND CompletionPercentage <= 100);
 
+-- Filtrer les visionnages : Trouver tous les utilisateurs ayant terminé de regarder un film.
+SELECT u.FirstName,u.LastName , w.CompletionPercentage
+FROM watchhistory w
+INNER JOIN user_plt u
+ON w.UserID = u.UserID
+WHERE CompletionPercentage = 100;
 
