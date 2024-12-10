@@ -1,0 +1,7 @@
+# Ignore the entire folder
+vendor/
+
+# Ignore a specific file
+composer.json
+composer.lock
+index.php

@@ -78,3 +78,7 @@ FOREIGN KEY (MovieID) REFERENCES movie(MovieId);
 ALTER TABLE review
 ADD CONSTRAINT FK_movieReview
 FOREIGN KEY (MovieID) REFERENCES movie(MovieID);
+
+--Insérer un film : Ajouter un nouveau film intitulé Data Science Adventures dans le genre "Documentary"
+INSERT INTO movie (Title , Genre, ReleaseYear , Duration , Rating)
+VALUES( 'Data Science Adventures' , 'Documentary' , 2023 , 220 , 'PG');
