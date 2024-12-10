@@ -17,3 +17,10 @@ RegistrationDate date,
 SubscriptionID int NOT NULL 
 )
 
+--add table subscription
+CREATE TABLE subscription(
+SubscriptionID INT AUTO_INCREMENT PRIMARY KEY, 
+SubscriptionType varchar (50) NOT NULL
+CHECK (SubscriptionType = 'Basic' OR SubscriptionType = 'Premium'),
+MonthlyFee DECIMAL (10,2)
+);
